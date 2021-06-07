@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2021-04-07">
+    <creator>NetworkX 2.5</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="node">
+      <attribute id="0" title="name" type="string" />
+      <attribute id="1" title="age" type="long" />
+      <attribute id="2" title="compromised" type="boolean" />
+      <attribute id="3" title="fraudReported" type="boolean" />
+      <attribute id="4" title="username" type="string" />
+      <attribute id="5" title="platform" type="string" />
+      <attribute id="6" title="followers" type="long" />
+    </attributes>
+    <nodes>
+      <node id="1" label="Person">
+        <attvalues>
+          <attvalue for="0" value="John Doe" />
+          <attvalue for="1" value="40" />
+        </attvalues>
+      </node>
+      <node id="2" label="CreditCard">
+        <attvalues>
+          <attvalue for="0" value="Visa" />
+          <attvalue for="2" value="false" />
+        </attvalues>
+      </node>
+      <node id="3" label="Store">
+        <attvalues>
+          <attvalue for="0" value="Walmart" />
+        </attvalues>
+      </node>
+      <node id="4" label="Category">
+        <attvalues>
+          <attvalue for="0" value="Grocery store" />
+        </attvalues>
+      </node>
+      <node id="5" label="Pos">
+        <attvalues>
+          <attvalue for="2" value="false" />
+        </attvalues>
+      </node>
+      <node id="6" label="Transaction">
+        <attvalues>
+          <attvalue for="3" value="false" />
+        </attvalues>
+      </node>
+      <node id="22" label="SocialMedia">
+        <attvalues>
+          <attvalue for="4" value="john_doe" />
+          <attvalue for="5" value="Facebook" />
+          <attvalue for="6" value="2000" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="1" target="2" id="0" type="OWNS" />
+      <edge source="1" target="22" id="1" type="HAS_ACCOUNT" />
+      <edge source="2" target="6" id="2" type="HAS_TRANSACTION" />
+      <edge source="3" target="4" id="3" type="IS_OF_CATEGORY" />
+      <edge source="3" target="5" id="4" type="HAS_POS_DEVICE" />
+      <edge source="6" target="5" id="5" type="TRANSACTION_AT" />
+    </edges>
+  </graph>
+</gexf>
