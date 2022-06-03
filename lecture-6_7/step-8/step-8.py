@@ -166,26 +166,19 @@ class Properties(Enum):
 def get_graph():
     log.info("Client fetching POS connected components")
 
-    memgraph.execute_and_fetch("MATCH (pos:Pos)<-[:At]-(transaction:Transaction {fraudReported: false}) "
+    results = memgraph.execute_and_fetch("MATCH (pos:Pos)<-[:At]-(transaction:Transaction {fraudReported: false}) "
                                "RETURN pos, transaction")
     try:
-        results = (
-            Match()
-            .node("Transaction", variable="transaction")
-            .to("At")
-            .node("Pos", variable="pos")
-            .execute()
-        )
         nodes_set = set()
         links_set = set()
         for result in results:
-            pos_id = result["pos"].properties[Properties.ID.value]
+            pos_id = result["pos"].id
             pos_label = "POS " + str(pos_id)
-            pos_compromised = result["pos"].properties[Properties.COMPROMISED.value]
+            pos_compromised = result["pos"].compromised
 
-            transaction_id = result["transaction"].properties[Properties.ID.value]
+            transaction_id = result["transaction"].id
             transaction_label = "Transaction " + str(transaction_id)
-            transaction_fraudulent = result["transaction"].properties[Properties.FRAUDREPORTED.value]
+            transaction_fraudulent = result["transaction"].fraudReported
 
             nodes_set.add((pos_id, pos_label, pos_compromised))
             nodes_set.add(
