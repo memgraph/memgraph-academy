@@ -1,0 +1,13 @@
+#/Users/katelatte/repos/graph-analytics-course/networkX-basics/graph-export/data-export-adjlist.py
+# GMT Thu Oct 27 14:38:47 2022
+# Petersen Graph
+0 1 4 5
+1 2 6
+2 3 7
+3 4 8
+4 9
+5 7 8
+6 8 9
+7 9
+8
+9
