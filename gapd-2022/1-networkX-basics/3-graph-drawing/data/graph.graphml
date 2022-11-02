@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d8" for="edge" attr.name="type" attr.type="string" />
+  <key id="d7" for="node" attr.name="followers" attr.type="int" />
+  <key id="d6" for="node" attr.name="platform" attr.type="string" />
+  <key id="d5" for="node" attr.name="username" attr.type="string" />
+  <key id="d4" for="node" attr.name="fraudReported" attr.type="boolean" />
+  <key id="d3" for="node" attr.name="compromised" attr.type="boolean" />
+  <key id="d2" for="node" attr.name="age" attr.type="int" />
+  <key id="d1" for="node" attr.name="name" attr.type="string" />
+  <key id="d0" for="node" attr.name="label" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="1">
+      <data key="d0">Person</data>
+      <data key="d1">John Doe</data>
+      <data key="d2">40</data>
+    </node>
+    <node id="2">
+      <data key="d0">CreditCard</data>
+      <data key="d1">Visa</data>
+      <data key="d3">False</data>
+    </node>
+    <node id="3">
+      <data key="d0">Store</data>
+      <data key="d1">Walmart</data>
+    </node>
+    <node id="4">
+      <data key="d0">Category</data>
+      <data key="d1">Grocery store</data>
+    </node>
+    <node id="5">
+      <data key="d0">Pos</data>
+      <data key="d3">False</data>
+    </node>
+    <node id="6">
+      <data key="d0">Transaction</data>
+      <data key="d4">False</data>
+    </node>
+    <node id="22">
+      <data key="d0">SocialMedia</data>
+      <data key="d5">john_doe</data>
+      <data key="d6">Facebook</data>
+      <data key="d7">2000</data>
+    </node>
+    <edge source="1" target="2">
+      <data key="d8">OWNS</data>
+    </edge>
+    <edge source="1" target="22">
+      <data key="d8">HAS_ACCOUNT</data>
+    </edge>
+    <edge source="2" target="6">
+      <data key="d8">HAS_TRANSACTION</data>
+    </edge>
+    <edge source="3" target="4">
+      <data key="d8">IS_OF_CATEGORY</data>
+    </edge>
+    <edge source="3" target="5">
+      <data key="d8">HAS_POS_DEVICE</data>
+    </edge>
+    <edge source="6" target="5">
+      <data key="d8">TRANSACTION_AT</data>
+    </edge>
+  </graph>
+</graphml>
