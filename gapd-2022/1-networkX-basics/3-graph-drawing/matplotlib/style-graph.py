@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Importing graphs from a file
-G = nx.read_graphml("gapd-2022/networkX-basics/graph-drawing/data/graph.graphml")
+G = nx.read_graphml("gapd-2022/1-networkX-basics/3-graph-drawing/data/graph.graphml")
 
 # Defining the node colors
 colors = np.linspace(0, 1, len(G.nodes))

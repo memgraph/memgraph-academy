@@ -1,8 +1,6 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-# https://networkx.org/documentation/stable/reference/drawing.html#module-networkx.drawing.layout
-
 G = nx.dodecahedral_graph()
 
 # spring layout is default - position nodes using Fruchterman-Reingold force-directed algorithm.
