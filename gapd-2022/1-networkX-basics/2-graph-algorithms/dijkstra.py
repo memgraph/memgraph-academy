@@ -4,7 +4,7 @@ import pprint as pp
 
 
 g = nx.read_edgelist(
-    "networkX-basics/graph-algorithms/datasets/graph-weighted.txt",
+    "gapd-2022/1-networkX-basics/2-graph-algorithms/data/graph-weighted.txt",
     nodetype=str,
     data=(("weight", int),),
     create_using=nx.Graph(),

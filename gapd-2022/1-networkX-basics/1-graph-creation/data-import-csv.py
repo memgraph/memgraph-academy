@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-use_pandas = False
+use_pandas = True
 graph_type = nx.Graph()
 
 

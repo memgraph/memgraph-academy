@@ -2,7 +2,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 
-with open("networkX-basics/graph-algorithms/dataset/graph.txt") as f:
+with open("gapd-2022/1-networkX-basics/2-graph-algorithms/data/graph.txt") as f:
     lines = f.readlines()
 
 edgeList = [line.strip().split() for line in lines]

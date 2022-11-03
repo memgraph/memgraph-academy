@@ -14,8 +14,10 @@ def draw_network(G, layout, colors, position, draw_labels, title):
         nx.draw_networkx_labels(G, pos=layout, labels=node_labels)
 
 
-G = nx.read_gexf("networkX-basics/graph-algorithms/dataset/graph.gexf")
+# reading a graph
+G = nx.read_gexf("gapd-2022/1-networkX-basics/2-graph-algorithms/data/graph.gexf")
 
+# degree centrality
 centrality = nx.degree_centrality(G)
 colors = list(centrality.values())
 
@@ -23,6 +25,7 @@ draw_network(
     G, nx.spring_layout(G), colors, (0, 0), draw_labels=False, title="Degree centrality"
 )
 
+# closeness centrality
 centrality = nx.closeness_centrality(G)
 colors = list(centrality.values())
 
@@ -35,6 +38,7 @@ draw_network(
     title="Closeness centrality",
 )
 
+# betweenness centrality
 centrality = nx.betweenness_centrality(G)
 colors = list(centrality.values())
 
@@ -47,6 +51,7 @@ draw_network(
     title="Betweenness centrality",
 )
 
+# katz centrality
 centrality = nx.katz_centrality(G)
 colors = list(centrality.values())
 
@@ -54,6 +59,7 @@ draw_network(
     G, nx.spring_layout(G), colors, (1, 1), draw_labels=False, title="Katz centrality"
 )
 
+# pagerank centrality
 centrality = nx.pagerank(G)
 colors = list(centrality.values())
 
