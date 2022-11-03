@@ -3,15 +3,15 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-use_pandas = True
+use_pandas = False
 graph_type = nx.Graph()
 
 
 if use_pandas:
-    df = pd.read_csv("networkX-basics/graph-creation/data/graph.csv")
+    df = pd.read_csv("gapd-2022/1-networkX-basics/1-graph-creation/data/graph.csv")
     G = nx.from_pandas_edgelist(df, create_using=graph_type)
 else:
-    Data = open("networkX-basics/graph-creation/data/graph.csv", "r")
+    Data = open("gapd-2022/1-networkX-basics/1-graph-creation/data/graph.csv", "r")
     next(Data, None)
     G = nx.parse_edgelist(Data, delimiter=",", create_using=graph_type, nodetype=int)
 
