@@ -1,0 +1,35 @@
+@NodeStyle {
+    size: 6 color: #DD2222 color-hover: Lighter(#DD2222) color-selected: Lighter(#DD2222) border-width: 0.6 border-color: #1d1d1d font-size: 3
+}
+
+@NodeStyle Greater(Size(Labels(node)), 0) {
+    label: Format(":{}", Join(Labels(node), " :"))
+}
+
+@NodeStyle HasProperty(node, "name") {
+    label: AsText(Property(node, "name"))
+}
+
+@NodeStyle HasProperty(node, "rank") {
+    size: Mul(AsNumber(Property(node, "rank")), 100)
+}
+
+@EdgeStyle {
+    color: #999999 color-hover: #1d1d1d color-selected: #1d1d1d width: 0.3 width-hover: 0.9 width-selected: 0.9 font-size: 3
+}
+
+@NodeStyle Equals(Property(node, "community"), 0) {
+    color: red
+}
+
+@NodeStyle Equals(Property(node, "community"), 1) {
+    color: blue
+}
+
+@NodeStyle Equals(Property(node, "community"), 2) {
+    color: yellow
+}
+
+@NodeStyle Equals(Property(node, "community"), 3) {
+    color: green
+}
